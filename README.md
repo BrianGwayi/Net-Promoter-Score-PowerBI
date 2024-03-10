@@ -10,9 +10,9 @@ How likely is it that you would recommend [Organization X] to a friend/family?
 Rating ranges between 0 (not likely) - 10 (Very likely).
 Customers fall into 3 categories;
 
-• Promoters (score 9-10) are loyal enthusiasts.
-• Passives (score 7-8) are satisfied but unenthusiastic, vulnerable to competitive offerings.
-• Detractors (score 0-6) are unhappy, can damage brand through negative word-of-mouth.
+• Promoters (score 9-10) are loyal enthusiasts.  
+• Passives (score 7-8) are satisfied but unenthusiastic, vulnerable to competitive offerings.  
+• Detractors (score 0-6) are unhappy, can damage brand through negative word-of-mouth.  
 
 ## Net Promoter Score Calculation
 
