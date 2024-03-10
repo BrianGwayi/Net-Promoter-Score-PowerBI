@@ -23,23 +23,23 @@ a low of -100 (if every customer is a Detractor) to a high of 100 (if every cust
 
 ### Current Month - Number of Respodents
 
-`Respodents = CALCULATE(
-    COUNT('Net-Promoter-Score'[ID]),
+`Respodents = CALCULATE(  
+    COUNT('Net-Promoter-Score'[ID]),  
     DATESMTD('Calendar'[Date]))`
 
 ### Current Month - Average Rating
 
-`Avg-Rating = CALCULATE(
-    AVERAGE('Net-Promoter-Score'[NPS-Rating]),
+`Avg-Rating = CALCULATE(  
+    AVERAGE('Net-Promoter-Score'[NPS-Rating]),  
     DATESMTD('Calendar'[Date]))`
 
 ## Net Promoter Score Categories -  Count Current Month
 ### Promoters
-`Promoters = 
-    VAR Promoters = CALCULATE(
-        COUNT('Net-Promoter-Score'[ID]),
-        'Net-Promoter-Score'[NPS-Categories] = "Promoters",
-        DATESMTD('Calendar'[Date]))
+`Promoters =  
+    VAR Promoters = CALCULATE(  
+        COUNT('Net-Promoter-Score'[ID]),  
+        'Net-Promoter-Score'[NPS-Categories] = "Promoters",  
+        DATESMTD('Calendar'[Date]))  
         RETURN Promoters`
 
 ### Passives
