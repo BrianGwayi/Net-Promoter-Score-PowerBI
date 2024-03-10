@@ -3,7 +3,7 @@
 
 ![PBIDesktop_ieyw2Zlxw1](https://github.com/BrianGwayi/NetPromoterScore-PowerBI/assets/115585139/aab68aee-3284-4f86-a0e6-6376654c8670)
 
-# Net Promoter Score
+## Net Promoter Score
 
 How likely is it that you would recommend [Organization X] to a friend/family?
 
@@ -14,55 +14,53 @@ Customers fall into 3 categories;
 • Passives (score 7-8) are satisfied but unenthusiastic, vulnerable to competitive offerings.
 • Detractors (score 0-6) are unhappy, can damage brand through negative word-of-mouth.
 
-# Net Promoter Score Calculation
+## Net Promoter Score Calculation
 
 Subtract the percentage of Detractors from the percentage of Promoters, which can range from 
 a low of -100 (if every customer is a Detractor) to a high of 100 (if every customer is a Promoter).
 
-# DAX Measures & Calcualtion
+## Measures & Calculations
 
-## Number of Respodents Current Month
+### Current Month - Number of Respodents
 
-Respodents = CALCULATE(
+`Respodents = CALCULATE(
     COUNT('Net-Promoter-Score'[ID]),
-    DATESMTD('Calendar'[Date]))
+    DATESMTD('Calendar'[Date]))`
 
-## Average Rating-Current Month
+### Current Month - Average Rating
 
-Avg-Rating = CALCULATE(
+`Avg-Rating = CALCULATE(
     AVERAGE('Net-Promoter-Score'[NPS-Rating]),
-    DATESMTD('Calendar'[Date]))
+    DATESMTD('Calendar'[Date]))`
 
-## Promoters Count-Current Month
-
-Promoters = 
+## Net Promoter Score Categories -  Count Current Month
+### Promoters
+`Promoters = 
     VAR Promoters = CALCULATE(
         COUNT('Net-Promoter-Score'[ID]),
         'Net-Promoter-Score'[NPS-Categories] = "Promoters",
         DATESMTD('Calendar'[Date]))
-        RETURN Promoters
+        RETURN Promoters`
 
-Passives Count-Current Month
-
-Passives = 
+### Passives
+`Passives = 
     VAR Passives = CALCULATE(
         COUNT('Net-Promoter-Score'[ID]),
         'Net-Promoter-Score'[NPS-Categories] = "Passives",
         DATESMTD('Calendar'[Date]))
-        RETURN Passives
+        RETURN Passives`
 
-Detractors Count-Current Month
-
-Detractor =
+### Detractors
+`Detractor =
 VAR Detractors = CALCULATE(
         COUNT('Net-Promoter-Score'[ID]),
         'Net-Promoter-Score'[NPS-Categories] = "Detractors",
         DATESMTD('Calendar'[Date]))
     VAR Targets = 10
-        RETURN Detractors
+        RETURN Detractors`
 
 ## Net Promoter Score
-NPS-Score = 
+`NPS-Score = 
     VAR promoters = 
         CALCULATE(
             COUNT('Net-Promoter-Score'[ID]),
@@ -86,17 +84,14 @@ NPS-Score =
     VAR NetPromoters = Promoters - Detractors
 
 RETURN
-    DIVIDE(NetPromoters, Respodents) *100
+    DIVIDE(NetPromoters, Respodents) *100`
 
-## Net Promoter Score Target
-NPS-Target = 15
+### Net Promoter Score Maximun Value
+`Gauge-Max = 100`
 
-## Net Promoter Score Maximun Value
-Gauge-Max = 100
+### Icons and Color Coding
 
-# Icons and Color Coding
-
-Color-Code = IF([NPS-Score] < [NPS-Target], "#D64550", "#72D96F")
+`Color-Code = IF([NPS-Score] < [NPS-Target], "#D64550", "#72D96F")`
 
 
 Promoter-Icon = "☺"
