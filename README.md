@@ -1,10 +1,7 @@
 # NetPromoterScore-PowerBI
  Customer Experience Analysis
 
-# Net Promoter Dashboard - Desktop View
-
-# Net Promoter Dashboard - Mobile View
-
+![PBIDesktop_ieyw2Zlxw1](https://github.com/BrianGwayi/NetPromoterScore-PowerBI/assets/115585139/aab68aee-3284-4f86-a0e6-6376654c8670)
 
 # Net Promoter Score
 
