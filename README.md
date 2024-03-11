@@ -1,9 +1,7 @@
 # NetPromoterScore-PowerBI
  Customer Experience Analysis
 
-![PBIDesktop_ieyw2Zlxw1](https://github.com/BrianGwayi/NetPromoterScore-PowerBI/assets/115585139/aab68aee-3284-4f86-a0e6-6376654c8670)
-
-## Net Promoter Score
+ ## Net Promoter Score
 
 How likely is it that you would recommend [Organization X] to a friend/family?
 
@@ -13,6 +11,8 @@ Customers fall into 3 categories;
 • Promoters (score 9-10) are loyal enthusiasts.  
 • Passives (score 7-8) are satisfied but unenthusiastic, vulnerable to competitive offerings.  
 • Detractors (score 0-6) are unhappy, can damage brand through negative word-of-mouth.  
+
+![PBIDesktop_ieyw2Zlxw1](https://github.com/BrianGwayi/NetPromoterScore-PowerBI/assets/115585139/aab68aee-3284-4f86-a0e6-6376654c8670)
 
 ## Net Promoter Score Calculation
 
