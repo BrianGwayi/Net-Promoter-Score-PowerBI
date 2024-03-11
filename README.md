@@ -1,4 +1,4 @@
-# NetPromoterScore-PowerBI
+# Net Promoter Score-PowerBI
  Customer Experience Analysis
 
  ## Net Promoter Score
